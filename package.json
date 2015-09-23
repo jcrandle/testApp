@@ -23,6 +23,8 @@
     "gulp-nodemon": "~2.0.4",
     "gulp-jshint": "~1.11.2",
     "gulp-plumber": "~1.0.1",
-    "connect-livereload": "~0.5.3"
+    "connect-livereload": "~0.5.3",
+    "gulp-war": "~0.1.2",
+    "gulp-zip": "~3.0.2"
   }
 }

@@ -6,6 +6,8 @@
     jshint = require('gulp-jshint'),
     livereload = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
+    war = require('gulp-war'),
+    zip = require('gulp-zip'),
     _paths = ['server/**/*.js', 'client/js/*.js', 'server/views/*.html'];
 
     //register nodemon task
@@ -37,6 +39,16 @@
         gulp.src(_paths)
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
+    });
+
+    gulp.task('war', function () {
+        gulp.src(["*.js", "*.md", "test/*.js"])
+        .pipe(war({
+            welcome: 'index.html',
+            displayName: 'Grunt WAR',
+        }))
+        .pipe(zip('myApp.war'))
+        .pipe(gulp.dest("./dist"));
     });
 
     // The default task (called when you run `gulp` from cli)

@@ -6,7 +6,7 @@
     jshint = require('gulp-jshint'),
     livereload = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
-    _paths = ['server/**/*.js', 'client/js/*.js', 'client/dist/**/*.html];
+    _paths = ['server/**/*.js', 'client/js/*.js'];
 
     //register nodemon task
     gulp.task('nodemon', function() {
